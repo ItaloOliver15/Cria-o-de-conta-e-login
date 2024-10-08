@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Estiloso com Círculos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Círculos no fundo */
+        .circle-one, .circle-two {
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .circle-one {
+            width: 400px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.1);
+            top: -150px;
+            left: -200px;
+        }
+
+        .circle-two {
+            width: 500px;
+            height: 500px;
+            background-color: rgba(255, 61, 0, 0.15);
+            bottom: -200px;
+            right: -250px;
+        }
+
+        /* Caixa de login */
+        .login-container {
+            background: linear-gradient(145deg, #333, #444);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: #fff;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .input-field {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #555;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #222;
+            outline: none;
+            transition: all 0.4s ease;
+        }
+
+        .input-field input::placeholder {
+            color: #aaa;
+        }
+
+        .input-field input:focus {
+            border-color: #ff3d00;
+            box-shadow: 0 0 10px rgba(255, 61, 0, 0.5);
+        }
+
+        .login-btn {
+            background-color: #ff3d00;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #e63600;
+            transform: scale(1.05);
+        }
+
+        .forgot-password {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .forgot-password a {
+            color: #ff3d00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            color: #e63600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Círculos de fundo -->
+    <div class="circle-one"></div>
+    <div class="circle-two"></div>
+
+    <!-- Caixa de login -->
+    <div class="login-container">
+        <h2>Entrar</h2>
+        <form action="#" method="POST">
+            <div class="input-field">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="login-btn">Entrar</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Esqueci minha senha</a>
+        </div>
+    </div>
+
+</body>
+</html>
